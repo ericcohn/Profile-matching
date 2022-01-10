@@ -1,7 +1,5 @@
 ## Packages
 library(designmatch)
-library(doParallel)
-library(foreach)
 library(MASS)
 source("oneprob_profmatch.R")
 source("problemparameters_profmatch.R")
