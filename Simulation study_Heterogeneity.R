@@ -23,7 +23,7 @@ argslist <- vector("character", 2^3*3)
 for (i in 1:length(sigmalist)){
   for (j in 1:length(clist)){
    	ind <- 3 * (i - 1) + j
-   	argslist[ind] <- paste0("00010200", sigmalist[i], clist[j])
+   	argslist[ind] <- paste0("00010500", sigmalist[i], clist[j])
    }
 }
 
