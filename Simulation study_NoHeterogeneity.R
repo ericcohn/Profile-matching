@@ -27,15 +27,12 @@ for (i in 1:length(sigmalist)){
    }
 }
 
+nreps <- 10000
 for (a in 1:1){
   args <- argslist[a]
-  nreps <- as.numeric(substr(args, 1, 4))
-  nboots <- as.numeric(substr(args, 5, 8))
-  sigma <- as.numeric(substr(args, 9, 11))
-  c <- as.numeric(substr(args, 12, 12))
-  
-  s <- as.numeric(substr(args, 13, 13))
-  ci <- as.numeric(substr(args, 14, 14))
+  nboots <- as.numeric(substr(args, 1, 4))
+  sigma <- as.numeric(substr(args, 5, 7))
+  c <- as.numeric(substr(args, 8, 8))
   
   sigma <- sqrt(sigma)
   

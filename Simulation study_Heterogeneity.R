@@ -23,19 +23,16 @@ argslist <- vector("character", 2^3*3)
 for (i in 1:length(sigmalist)){
   for (j in 1:length(clist)){
    	ind <- 3 * (i - 1) + j
-   	argslist[ind] <- paste0("00010500", sigmalist[i], clist[j])
+   	argslist[ind] <- paste0("0500", sigmalist[i], clist[j])
    }
 }
 
+nreps <- 10000
 for (a in 1:1){
   args <- argslist[a]
-  nreps <- as.numeric(substr(args, 1, 4))
-  nboots <- as.numeric(substr(args, 5, 8))
-  sigma <- as.numeric(substr(args, 9, 11))
-  c <- as.numeric(substr(args, 12, 12))
-  
-  s <- as.numeric(substr(args, 13, 13))
-  ci <- as.numeric(substr(args, 14, 14))
+  nboots <- as.numeric(substr(args, 1, 4))
+  sigma <- as.numeric(substr(args, 5, 7))
+  c <- as.numeric(substr(args, 8, 8))
   
   sigma <- sqrt(sigma)
   
